@@ -292,17 +292,6 @@
          "id":49,
          "name":"Sound",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"audioVolume",
-                 "type":"float",
-                 "value":1
-                }, 
-                {
-                 "name":"playAudio",
-                 "type":"string",
-                 "value":"https:\/\/github.com\/alicefairy\/alicesWAmap\/raw\/master\/assets\/audio\/einf%C3%BChrung.wav"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
