@@ -391,6 +391,12 @@
          "id":9,
          "name":"walls",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"script",
+                 "type":"string",
+                 "value":"script.js"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":50,
@@ -751,7 +757,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.8.5",
+ "tiledversion":"1.9.0",
  "tileheight":32,
  "tilesets":[
         {
@@ -909,6 +915,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.8",
+ "version":"1.9",
  "width":50
 }
