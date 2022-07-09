@@ -296,7 +296,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"xyz"
+                 "value":"https:\/\/github.com\/alicefairy\/alicesWAmap\/raw\/master\/assets\/audio\/einf%C3%BChrung.wav"
                 }],
          "type":"tilelayer",
          "visible":true,
