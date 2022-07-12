@@ -13,8 +13,8 @@ export default function getNPCList() : NPCInterface[] {
                 duration: 20
             },
             tiles: [
-                "pers_0_0",
-                "pers_0_1"
+                0,
+                1
             ],
             layer: "Sound"
         }
