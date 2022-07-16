@@ -10,6 +10,22 @@ let currentPopup: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
 
+    // teachers popup in static code because abstraction isn't worth it for this one usecase
+    WA.room.onEnterLayer('popuptrigger').subscribe(() => {
+        WA.ui.openPopup('teacherPopup', 'Oh man,ich weiß nicht mehr weiter!', [{
+            label: 'Weiter',
+            callback: (popup) => {
+                popup.close()
+                WA.ui.openPopup('teacherPopup', 'Ich komme mit dem ganzen Arbeitsblätter erstellen einfach nicht hinterher...', [{
+                    label: 'Schließen',
+                    callback: (popup) => {
+                        popup.close()
+                    }
+                }])     
+            }
+        }]) 
+    });
+
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
