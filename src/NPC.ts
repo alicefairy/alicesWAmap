@@ -6,7 +6,6 @@ class NPC {
     readonly npc : NPCInterface;
     readonly audioObject : Sound;
     currentTileIndex: number = 0;
-    readonly personLayer: string = "Person";
     
     readonly config: object = {
         volume : 0.5,
@@ -51,7 +50,7 @@ class NPC {
                 x: this.npc.position.x,
                 y: this.npc.position.y,
                 tile: this.nextTile(),
-                layer: this.personLayer
+                layer: this.npc.layer
             }]);
         }, speed)
         setTimeout(() => {
@@ -60,7 +59,7 @@ class NPC {
                     x: this.npc.position.x,
                     y: this.npc.position.y,
                     tile: this.nextTile(),
-                    layer: this.personLayer
+                    layer: this.npc.layer
                 }]);
             }, speed)
         }, speed / 2)
@@ -84,7 +83,7 @@ class NPC {
             x: this.npc.position.x,
             y: this.npc.position.y,
             tile: this.npc.tiles[0],
-            layer: this.personLayer
+            layer: this.npc.layer
         }]);
     }
 

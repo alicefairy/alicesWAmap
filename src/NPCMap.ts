@@ -22,7 +22,7 @@ export default function getNPCList() : NPCInterface[] {
         //Paul
         {
             position: {
-                x: 26,
+                x: 25,
                 y: 15,
             },
 
@@ -31,15 +31,15 @@ export default function getNPCList() : NPCInterface[] {
                 duration: 20
             },
             tiles: [
-                0,
-                1
+                'paul_0',
+                'paul_1'
             ],
             layer: "Paul"
         },
         //Frau1
         {
             position: {
-                x: 24,
+                x: 26,
                 y: 3,
             },
 
@@ -48,15 +48,15 @@ export default function getNPCList() : NPCInterface[] {
                 duration: 88
             },
             tiles: [
-                0,
-                1
+                'frau1_0',
+                'frau1_1'
             ],
             layer: "Frau1"
         },
         //Frau2
         {
             position: {
-                x: 43,
+                x: 42,
                 y: 3,
             },
 
@@ -65,8 +65,8 @@ export default function getNPCList() : NPCInterface[] {
                 duration: 71
             },
             tiles: [
-                0,
-                1
+                'frau2_0',
+                'frau2_1'
             ],
             layer: "Frau2"
         },
@@ -82,15 +82,15 @@ export default function getNPCList() : NPCInterface[] {
                 duration: 87
             },
             tiles: [
-                0,
-                1
+                'anzug_0',
+                'anzug_1'
             ],
             layer: "Anzug"
         },
         //Kostüm
         {
             position: {
-                x: 43,
+                x: 42,
                 y: 27,
             },
 
@@ -98,16 +98,13 @@ export default function getNPCList() : NPCInterface[] {
                 path: "assets/audio/wahrnehmung und kritik.wav",
                 duration: 96
             },
-            tiles: [
-                0,
-                1
-            ],
+            tiles: [],
             layer: "Kostüm"
         },
         //Philipp
         {
             position: {
-                x: 25,
+                x: 26,
                 y: 27,
             },
 
@@ -115,10 +112,7 @@ export default function getNPCList() : NPCInterface[] {
                 path: "assets/audio/outro.wav",
                 duration: 18
             },
-            tiles: [
-                0,
-                1
-            ],
+            tiles: [],
             layer: "Philipp"
         }
     ]
