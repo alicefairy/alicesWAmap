@@ -2,23 +2,6 @@ import { NPCInterface } from "./interfaces";
 
 export default function getNPCList() : NPCInterface[] {
     return [
-        //LehrerIn
-        {
-            position: {
-                x: 1,
-                y: 5,
-            },
-
-            audio: {
-                path: "assets/audio/einführung.wav",
-                duration: 20
-            },
-            tiles: [
-                0,
-                1
-            ],
-            layer: "Sound"
-        },
         //Paul
         {
             position: {
