@@ -10,7 +10,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/einführung.wav",
+                path: "assets/audio/einfuehrung.mp3",
                 duration: 20
             },
             tiles: [
@@ -27,7 +27,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/definition.wav",
+                path: "assets/audio/definition.mp3",
                 duration: 88
             },
             tiles: [
@@ -44,7 +44,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/mehrwerte.wav",
+                path: "assets/audio/mehrwerte.mp3",
                 duration: 71
             },
             tiles: [
@@ -61,7 +61,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/lizenzen.wav",
+                path: "assets/audio/lizenzen.mp3",
                 duration: 87
             },
             tiles: [
@@ -78,7 +78,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/wahrnehmung und kritik.wav",
+                path: "assets/audio/wahrnehmung-kritik.mp3",
                 duration: 96
             },
             tiles: [],
@@ -92,7 +92,7 @@ export default function getNPCList() : NPCInterface[] {
             },
 
             audio: {
-                path: "assets/audio/outro.wav",
+                path: "assets/audio/outro.mp3",
                 duration: 18
             },
             tiles: [],

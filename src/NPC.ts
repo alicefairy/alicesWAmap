@@ -45,16 +45,9 @@ class NPC {
     startSpeaking (speed = 800) {
         this.audioObject.play(this.config);
 
-        this.speakInterval1 = setInterval(() => {
-            WA.room.setTiles([{
-                x: this.npc.position.x,
-                y: this.npc.position.y,
-                tile: this.nextTile(),
-                layer: this.npc.layer
-            }]);
-        }, speed)
-        setTimeout(() => {
-            this.speakInterval2 = setInterval(() => {
+        // only animate when tiles are provided
+        if (this.npc.tiles.length) {
+            this.speakInterval1 = setInterval(() => {
                 WA.room.setTiles([{
                     x: this.npc.position.x,
                     y: this.npc.position.y,
@@ -62,7 +55,17 @@ class NPC {
                     layer: this.npc.layer
                 }]);
             }, speed)
-        }, speed / 2)
+            setTimeout(() => {
+                this.speakInterval2 = setInterval(() => {
+                    WA.room.setTiles([{
+                        x: this.npc.position.x,
+                        y: this.npc.position.y,
+                        tile: this.nextTile(),
+                        layer: this.npc.layer
+                    }]);
+                }, speed)
+            }, speed / 2)
+        }
 
         this.durationTimeout = setTimeout(() => {
             this.stopSpeaking()
@@ -73,18 +76,22 @@ class NPC {
     * @desc stops speaking animation, stops sound file and resets the tile to default
     */
     stopSpeaking() {
-        this.audioObject.stop()
-        
-        clearInterval(this.speakInterval1)
-        clearInterval(this.speakInterval2)
-        clearTimeout(this.durationTimeout)
-        
-        WA.room.setTiles([{
-            x: this.npc.position.x,
-            y: this.npc.position.y,
-            tile: this.npc.tiles[0],
-            layer: this.npc.layer
-        }]);
+        try {
+            // try clearing the intervals. fails, if none were started in the first place due to lacking tile array
+            clearInterval(this.speakInterval1)
+            clearInterval(this.speakInterval2)
+            clearTimeout(this.durationTimeout)
+        } finally {
+            this.audioObject.stop()
+            
+            // reset npc to default tiles
+            WA.room.setTiles([{
+                x: this.npc.position.x,
+                y: this.npc.position.y,
+                tile: this.npc.tiles[0],
+                layer: this.npc.layer
+            }]);
+        }
     }
 
     /**
